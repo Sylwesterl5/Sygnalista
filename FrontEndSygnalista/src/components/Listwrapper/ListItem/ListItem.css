@@ -5,11 +5,13 @@ ul {
 .listItem__list{
     align-items: center;
     list-style: none;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 .listItem__wrapper {
     list-style: none;
-    padding: 0;
+    padding: 50px 30px;
     margin: 0;
     display: flex;
     padding: 5px;
@@ -22,6 +24,7 @@ ul {
     height: 100px;
     border-radius: 50%;
     background-color: blue;
+    margin-right: 30px;
 }
 
 .listItem__Title {
@@ -46,4 +49,6 @@ ul {
     background: none;
     border: 2px solid rgb(34, 134, 228);
     color: rgb(34, 134, 228);
+    width: 45%;
+    align-items: center;
 }
