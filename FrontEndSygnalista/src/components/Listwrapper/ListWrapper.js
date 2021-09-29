@@ -1,11 +1,11 @@
 import React from 'react';
 import ListItem from './ListItem/ListItem';
-import './ListWrapper.module.css';
+import styles from './ListWrapper.module.css';
 import { listApplications } from 'data/ListApplications';
 
 
 const ListWrapper = () => (
-    <ul className='wrapper'>
+    <ul className={styles.wrapper}>
         { listApplications.map(item =>(
             <ListItem
                 status = {item.status}
