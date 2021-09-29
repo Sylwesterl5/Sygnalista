@@ -2,14 +2,14 @@ ul {
     list-style-type: none;
 }
 
-.listItem__list{
+.list{
     align-items: center;
     list-style: none;
     text-align: center;
     margin-bottom: 50px;
 }
 
-.listItem__wrapper {
+.wrapper {
     list-style: none;
     padding: 50px 30px;
     margin: 0;
@@ -19,7 +19,7 @@ ul {
     align-items: center;
 }
 
-.listItem__status{
+.status{
     width:100px;
     height: 100px;
     border-radius: 50%;
@@ -27,23 +27,22 @@ ul {
     margin-right: 30px;
 }
 
-.listItem__Title {
+.title {
     color:  rgb(34, 134, 228);
     font-weight: 700;
 
 }
 
-.listItem__data {
+.data {
     font-weight: 500;
     margin: 27px;
 }
 
-.listItem__description {
+.description {
     font-weight: 300;
-    
 }
 
-.listItem__button {
+.button {
     padding: 15px;
     font-weight: 500;
     background: none;
