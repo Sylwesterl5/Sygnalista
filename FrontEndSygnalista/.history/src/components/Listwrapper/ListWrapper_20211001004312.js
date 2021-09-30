@@ -8,6 +8,8 @@ const ListWrapper = () => (
     {listApplications.map((item) => (
       <ListItem
         status={item.status}
+
+
         title={item.title}
         data={item.data}
         description={item.description}
