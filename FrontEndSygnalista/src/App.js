@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./App.module.scss";
 import ListWrapper from "./components/Listwrapper/ListWrapper";
 
 function App() {

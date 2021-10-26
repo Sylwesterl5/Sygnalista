@@ -1,6 +1,6 @@
 import React from "react";
 import ListItem from "./ListItem/ListItem";
-import styles from "./ListWrapper.module.css";
+import styles from "./ListWrapper.module.scss";
 import { listApplications } from "data/ListApplications";
 
 const ListWrapper = () => (

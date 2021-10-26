@@ -1,5 +1,6 @@
 import React from "react";
-import styles from "./ListItem.module.css";
+import styles from "./ListItem.module.scss";
+import Button from "../../Button/Button"
 
 const ListItem = (props) => (
   <li>
@@ -10,7 +11,7 @@ const ListItem = (props) => (
         <p className={styles.data}>{props.data}</p>
       </div>
       <p className={styles.description}>{props.description}</p>
-      <button className={styles.button}>otwórz</button>
+      <Button>wjęcej</Button>
     </div>
   </li>
 );
