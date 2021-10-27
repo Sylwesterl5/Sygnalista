@@ -1,17 +1,11 @@
 import React from "react";
 import ListItem from "./ListItem/ListItem";
 import styles from "./ListWrapper.module.scss";
-import { listApplications } from "data/ListApplications";
 
-const ListWrapper = () => (
+const ListWrapper = props => (
   <ul className={styles.wrapper}>
-    {listApplications.map((item) => (
-      <ListItem
-        status={item.status}
-        title={item.title}
-        data={item.data}
-        description={item.description}
-      />
+    {props.items.map((item) => (
+      <ListItem key={item.title} {...item} />
     ))}
   </ul>
 );
