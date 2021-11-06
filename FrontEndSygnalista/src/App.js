@@ -4,7 +4,7 @@ import ListWrapper from "./components/Listwrapper/ListWrapper";
 import Form from "./components/Form/Form.js";
 import { listApplications } from "data/ListApplications";
 
-const i = 0;
+let i = 0;
 const givemeid = () => {
   return i++;
 };

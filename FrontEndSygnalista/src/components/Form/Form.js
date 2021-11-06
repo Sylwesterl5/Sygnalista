@@ -8,11 +8,11 @@ const Form = ({ submitFn }) => (
   <div className={styles.wrapper}>
     <Title>Dodaj zgłoszenie</Title>
     <form autoComplete="off" className={styles.form} onSubmit={submitFn}>
-      <Input name="name" label="Name" maxLength={30} />
-      <Input name="link" label="Twitter link" />
-      <Input name="image" label="Image" />
-      <Input tag="textarea" name="description" label="Description" />
-      <Button type="submit">add new item</Button>
+      <Input name="status" label="Status" maxLength={30} />
+      <Input name="title" label="Tytuł" />
+      <Input name="data" label="Data" />
+      <Input tag="textarea" name="description" label="Zgłoszenie" maxLength={1000} />
+      <Button type="submit">Dodaj zgłoszenie</Button>
     </form>
   </div>
 );
