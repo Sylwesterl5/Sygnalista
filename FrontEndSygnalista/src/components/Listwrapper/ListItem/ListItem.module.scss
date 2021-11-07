@@ -19,11 +19,35 @@ ul {
   align-items: center;
 }
 
-.status {
+.statusBegin {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: blue;
+  background-color: yellow;
+  margin-right: 30px;
+}
+
+.statusWork {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: orangered;
+  margin-right: 30px;
+}
+
+.statusEnd {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: green;
+  margin-right: 30px;
+}
+
+.statusFaill {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: red;
   margin-right: 30px;
 }
 

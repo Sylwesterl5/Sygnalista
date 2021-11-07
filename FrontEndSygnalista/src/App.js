@@ -3,6 +3,7 @@ import "./App.module.scss";
 import ListWrapper from "./components/Listwrapper/ListWrapper";
 import Form from "./components/Form/Form.js";
 import { listApplications } from "data/ListApplications";
+import SignIn from './components/SignIn/SignIn';
 
 let i = 0;
 const givemeid = () => {
@@ -27,10 +28,21 @@ const App = () => {
     e.target.reset();
   }, []);
 
+  
+
+  const signIn = useCallback((e) => {
+    e.preventDefault();
+    console.log(e.target[0].value);
+    console.log(e.target[1].value);
+    e.target.reset();
+  })
+
   return (
     <div className="App">
-      <ListWrapper items={items} />
-      <Form submitFn={addItem} />
+      {/* <ListWrapper items={items} />
+      <Form submitFn={addItem} /> */}
+      <SignIn submitSignIn={signIn} />
+
     </div>
   );
 };

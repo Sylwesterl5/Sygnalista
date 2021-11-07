@@ -1,7 +1,7 @@
 export const listApplications = [
   {
     id: -10,
-    status: " ",
+    status: "4",
     title: "tytuł numer zgłoszenia nadany przez kompa1",
     data: "data przyjęcia zgłoszenia",
     description:
@@ -9,7 +9,7 @@ export const listApplications = [
   },
   {
     id: -9,
-    status: " ",
+    status: "1",
     title: "tytuł numer zgłoszenia nadany przez kompa2",
     data: "data przyjęcia zgłoszenia",
     description:
@@ -17,7 +17,7 @@ export const listApplications = [
   },
   {
     id: -8,
-    status: " ",
+    status: "1",
     title: "tytuł numer zgłoszenia nadany przez kompa3",
     data: "data przyjęcia zgłoszenia",
     description:
@@ -25,7 +25,7 @@ export const listApplications = [
   },
   {
     id: -7,
-    status: " ",
+    status: "1",
     title: "tytuł numer zgłoszenia nadany przez kompa4",
     data: "data przyjęcia zgłoszenia",
     description:

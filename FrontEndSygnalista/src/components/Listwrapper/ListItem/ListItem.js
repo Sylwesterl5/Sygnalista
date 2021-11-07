@@ -2,14 +2,33 @@ import React from "react";
 import styles from "./ListItem.module.scss";
 import Button from "../../Button/Button"
 
-
 const ListItem = ({ status, title, data, description }) => {
+
+  let classStatus = null;
+
+  switch (status) {
+    case '1':classStatus = styles.statusBegin;
+      console.log(classStatus);
+      break;
+    case '2':classStatus = styles.statusWork;
+      console.log(classStatus);
+      break;
+    case '3':classStatus = styles.statusEnd;
+      console.log(classStatus);
+      break;
+    case '4':classStatus = styles.statusFaill;
+      console.log(classStatus);
+      break;
+    default:classStatus = styles.statusBegin;
+      console.log(classStatus)
+      break;
+  }
 
   return (
     <li>
       <div className={styles.list}>
         <div className={styles.wrapper}>
-          <div className={styles.status}>{status}</div>
+          <div className={classStatus}></div>
           <h2 className={styles.title}>{title}</h2>
           <p className={styles.data}>{data}</p>
         </div>
@@ -19,28 +38,5 @@ const ListItem = ({ status, title, data, description }) => {
     </li>
   );
 }
-
-
-
-
-// status = { item.status }
-// title = { item.title }
-// data = { item.data }
-// description = { item.description }
-
-
-// const ListItem = (props) => (
-//   <li>
-//     <div className={styles.list}>
-//       <div className={styles.wrapper}>
-//         <div className={styles.status}> {props.status}</div>
-//         <h2 className={styles.title}>{props.title}</h2>
-//         <p className={styles.data}>{props.data}</p>
-//       </div>
-//       <p className={styles.description}>{props.description}</p>
-//       <Button>wjęcej</Button>
-//     </div>
-//   </li>
-// );
 
 export default ListItem;

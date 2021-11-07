@@ -8,7 +8,7 @@ const Form = ({ submitFn }) => (
   <div className={styles.wrapper}>
     <Title>Dodaj zgłoszenie</Title>
     <form autoComplete="off" className={styles.form} onSubmit={submitFn}>
-      <Input name="status" label="Status" maxLength={30} />
+      <Input name="status" label="Status" statusStart="4" />
       <Input name="title" label="Tytuł" />
       <Input name="data" label="Data" />
       <Input tag="textarea" name="description" label="Zgłoszenie" maxLength={1000} />
