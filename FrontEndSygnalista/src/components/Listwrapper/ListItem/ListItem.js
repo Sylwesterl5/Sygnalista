@@ -28,7 +28,7 @@ const ListItem = ({ status, title, data, description }) => {
     <li>
       <div className={styles.list}>
         <div className={styles.wrapper}>
-          <div className={classStatus}></div>
+          <div className={`${classStatus} ${styles.status}`}></div>
           <h2 className={styles.title}>{title}</h2>
           <p className={styles.data}>{data}</p>
         </div>

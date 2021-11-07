@@ -35,13 +35,14 @@ const App = () => {
     console.log(e.target[0].value);
     console.log(e.target[1].value);
     e.target.reset();
-  })
+
+  },[])
 
   return (
     <div className="App">
-      {/* <ListWrapper items={items} />
-      <Form submitFn={addItem} /> */}
-      <SignIn submitSignIn={signIn} />
+      <ListWrapper items={items} />
+      <Form submitFn={addItem} />
+      {/* <SignIn submitSignIn={signIn} /> */}
 
     </div>
   );
