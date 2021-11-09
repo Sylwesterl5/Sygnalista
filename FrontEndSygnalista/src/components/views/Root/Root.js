@@ -1,9 +1,9 @@
 import React, { useCallback, useState } from "react";
-import "./App.module.scss";
-import ListWrapper from "./components/Listwrapper/ListWrapper";
-import Form from "./components/Form/Form.js";
+import './Root.module.scss';
+import ListWrapper from "../../Listwrapper/ListWrapper";
+import Form from "../../Form/Form";
 import { listApplications } from "data/ListApplications";
-import SignIn from './components/SignIn/SignIn';
+import SignIn from '../../SignIn/SignIn';
 
 let i = 0;
 const givemeid = () => {
@@ -15,12 +15,13 @@ const App = () => {
 
   const addItem = useCallback((e) => {
     e.preventDefault();
+
     const newItem = {
       id: givemeid(),
       status: e.target[0].value,
       title: e.target[1].value,
-      data: e.target[2].value,
-      description: e.target[3].value,
+      data: new Date().toISOString(),
+      description: e.target[2].value,
     };
 
     setItems((prevState) => [...prevState, newItem]);
