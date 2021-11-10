@@ -1,3 +1,0 @@
-$env:DEBUG='myapp:*'; npm start
-
-na przegładarce : http://localhost:3000/

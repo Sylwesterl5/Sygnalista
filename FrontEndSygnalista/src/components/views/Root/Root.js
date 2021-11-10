@@ -1,9 +1,10 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import './Root.module.scss';
 import ListWrapper from "../../Listwrapper/ListWrapper";
 import Form from "../../Form/Form";
 import { listApplications } from "data/ListApplications";
 import SignIn from '../../SignIn/SignIn';
+import {getData} from 'services/UseAnoucmans';
 
 let i = 0;
 const givemeid = () => {
@@ -39,12 +40,19 @@ const App = () => {
 
   },[])
 
+  
+
+  useEffect(()=>{
+    
+    getData().then(data=>{console.log(data)})
+
+  },[])
   return (
     <div className="App">
       <ListWrapper items={items} />
       <Form submitFn={addItem} />
       {/* <SignIn submitSignIn={signIn} /> */}
-
+      
     </div>
   );
 };
