@@ -2,7 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./input.module.scss";
 
-const Input = ({ tag: Tag, name, label, maxLenght, invisible, ...rest }) => (
+const Input = ({
+  tag: Tag,
+  name,
+  label,
+  maxLenght,
+  invisible,
+  upperStyle,
+  ...rest
+}) => (
   <div className={invisible ? styles.invisible : styles.formItem}>
     <Tag
       {...rest}
@@ -29,8 +37,8 @@ Input.propTypes = {
 Input.defaultProps = {
   tag: "input",
   maxLenght: 200,
-  type:"text",
-  invisible:false,
+  type: "text",
+  invisible: false,
 };
 
 export default Input;

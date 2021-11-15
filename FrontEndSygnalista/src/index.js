@@ -1,6 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import Root from "./components/views/Root/Root";
 
-ReactDOM.render(<Root />, document.getElementById("root"));
+import RouterProvider from "providers/router";
+
+import App from "./components/views/App";
+import "./index.css";
+import WiadomosciProvider from "providers/wiadomosci";
+
+ReactDOM.render(
+  <WiadomosciProvider>
+    <RouterProvider>
+      <App />
+    </RouterProvider>
+  </WiadomosciProvider>,
+  document.getElementById("root")
+);

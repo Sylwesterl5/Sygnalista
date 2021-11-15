@@ -4,7 +4,8 @@ import ListWrapper from "../../Listwrapper/ListWrapper";
 import Form from "../../Form/Form";
 import { listApplications } from "data/ListApplications";
 import SignIn from '../../SignIn/SignIn';
-import {getData} from 'services/UseAnoucmans';
+import {getAllWiadomosci} from 'services/UseAnoucmans';
+// import { Test } from "../../../Test/Test";
 
 let i = 0;
 const givemeid = () => {
@@ -12,7 +13,7 @@ const givemeid = () => {
 };
 
 const App = () => {
-  const [items, setItems] = useState([...listApplications]);
+  const [items, setItems] = useState([]);
 
   const addItem = useCallback((e) => {
     e.preventDefault();
@@ -24,6 +25,8 @@ const App = () => {
       data: new Date().toISOString(),
       description: e.target[2].value,
     };
+
+    // Test(e);
 
     setItems((prevState) => [...prevState, newItem]);
 
@@ -42,11 +45,15 @@ const App = () => {
 
   
 
-  useEffect(()=>{
+  useEffect(()=>{    // na montowanie komponenetu
     
-    getData().then(data=>{console.log(data)})
+    getAllWiadomosci().then(data=>{
+
+      setItems(data)
+    })
 
   },[])
+
   return (
     <div className="App">
       <ListWrapper items={items} />

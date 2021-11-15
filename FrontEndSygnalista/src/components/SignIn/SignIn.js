@@ -9,9 +9,9 @@ const SignIn = ({submitSignIn}) => (
         <Title>Dodaj zgłoszenie</Title>
         <Title>Zaloguj się</Title>
         <form autoComplete="off" className={styles.form} onSubmit={submitSignIn}>
-            <Input name='login' label='login' />
+            <Input name='Kod dostępu' label='Kod dostępu' />
             <Input name='password' label='password' type='password' placeholder="*********" />
-            <Button type='submit'>Zaloguj</Button>
+            <Button type='submit'>Potwierdź</Button>
         </form>
     </div>
 );
