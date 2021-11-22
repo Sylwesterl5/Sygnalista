@@ -1,8 +1,9 @@
 .formItem {
-  width: 100%;
+  //width: 100%;
   margin: 24px 0;
   position: relative;
   flex-shrink: 0;
+  width: 100%;
 }
 
 .formItemBar {
@@ -18,23 +19,24 @@
   top: 3px;
   left: 0;
   transition: 0.2s ease-out all;
-  font-size: 16px;
+  font-size: 30px;
 }
 
 .input,
 .textarea {
   color: #7d7d7d;
-  font-size: 16px;
+  font-size: 32px;
   border: none;
-  line-height: 22px;
+  line-height: 39px;
   width: 100%;
   background: none;
 }
 
 .textarea {
-  resize: none;
+  //resize: none;
   min-height: 150px;
 }
+
 
 .input:focus,
 .textarea:focus {
@@ -44,13 +46,13 @@
 .input:focus + .label,
 .textarea:focus + .label {
   top: -22px;
-  font-size: 13px;
+  font-size: 20px;
 }
 
 .input:not(:placeholder-shown) + .label,
 .textarea:not(:placeholder-shown) + .label {
   top: -22px;
-  font-size: 13px;
+  font-size: 20px;
 }
 
 .input:focus ~ .formItemBar,

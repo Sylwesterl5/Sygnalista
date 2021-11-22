@@ -4,14 +4,16 @@ import ReactDOM from "react-dom";
 import RouterProvider from "providers/router";
 
 import App from "./components/views/App";
-import "./index.css";
+import styles from "./index.module.scss";
 import WiadomosciProvider from "providers/wiadomosci";
 
 ReactDOM.render(
-  <WiadomosciProvider>
-    <RouterProvider>
-      <App />
-    </RouterProvider>
-  </WiadomosciProvider>,
+  <div className={styles.backGround}>
+    <WiadomosciProvider>
+      <RouterProvider>
+        <App />
+      </RouterProvider>
+    </WiadomosciProvider>
+  </div>,
   document.getElementById("root")
 );

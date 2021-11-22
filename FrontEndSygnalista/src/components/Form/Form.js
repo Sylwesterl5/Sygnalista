@@ -37,43 +37,49 @@ const Form = ({ submitFn, idZgloszenia }) => {
   );
 
   return (
-    <div className={styles.wrapper}>
-      <Title>Dodaj zgłoszenie</Title>
-      <form
-        autoComplete="off"
-        className={styles.form}
-        onSubmit={submitHandler}
-        onKeyDown={keyDownHandler}
-      >
-        {!idZgloszenia && (
+    <div className={styles.flex}>
+      <div className={styles.one}></div>
+      <div className={styles.wrapper}>
+        <Title>Dodaj zgłoszenie</Title>
+        <form
+          autoComplete="off"
+          className={styles.form}
+          onSubmit={submitHandler}
+          onKeyDown={keyDownHandler}
+        >
+          {!idZgloszenia && (
+            <div className={styles.divweight}>
+                <Input
+                name="status"
+                label="Status"
+                statusstart="1"
+                defaultValue="1"
+                invisible={true}
+              />
+            </div>
+          )}
+          {!idZgloszenia && (
+            <Input
+              name="title"
+              label="Tytuł"
+              onChange={handleTitleValueChange}
+              value={titleValue}
+            />
+          )}
           <Input
-            name="status"
-            label="Status"
-            statusstart="1"
-            defaultValue="1"
-            invisible={true}
+            tag="textarea"
+            name="description"
+            label="Zgłoszenie"
+            maxLength={1000}
+            onChange={handleDescriptionValueChange}
+            value={descriptionValue}
           />
-        )}
-        {!idZgloszenia && (
-          <Input
-            name="title"
-            label="Tytuł"
-            onChange={handleTitleValueChange}
-            value={titleValue}
-          />
-        )}
-        <Input
-          tag="textarea"
-          name="description"
-          label="Zgłoszenie"
-          maxLength={1000}
-          onChange={handleDescriptionValueChange}
-          value={descriptionValue}
-        />
-        <Button type="submit">
-          {idZgloszenia ? "Odpisz" : "Dodaj zgłoszenie"}
-        </Button>
-      </form>
+          <Button type="submit">
+            {idZgloszenia ? "Odpisz" : "Dodaj zgłoszenie"}
+          </Button>
+        </form>
+      </div>
+    <div className={styles.one}></div>
     </div>
   );
 };

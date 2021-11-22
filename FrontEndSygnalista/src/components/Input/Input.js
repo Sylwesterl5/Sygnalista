@@ -9,14 +9,16 @@ const Input = ({
   maxLenght,
   invisible,
   upperStyle,
+  uppercase,
   ...rest
 }) => (
   <div className={invisible ? styles.invisible : styles.formItem}>
     <Tag
       {...rest}
-      className={Tag === "textarea" ? styles.textarea : styles.input}
+      className={(Tag === "textarea" ? styles.textarea : styles.input)}
       name={name}
       id={name}
+      //maxLenght={maxLenght}
       required
       placeholder=" "
     />
@@ -39,6 +41,7 @@ Input.defaultProps = {
   maxLenght: 200,
   type: "text",
   invisible: false,
+  uppercase: false,
 };
 
 export default Input;

@@ -1,3 +1,32 @@
 .form {
-  margin-left: 36%;
+  display: flex;
+  width: 60%;
+  margin: 20px 0;
+  border-radius: 20px;
+  background: white;
+  border-bottom-style: solid;
+  border-bottom-color: yellow;
+  border-right-color: yellow;
+}
+
+.contener {
+  display: flex;
+}
+
+.one {
+width: 20%;
+}
+
+.three {
+width: 20%;
+}
+
+.inputWeight {
+  width: 50%;
+  //text-transform: uppercase;
+}
+
+.image {
+  width: 94px;
+  height: 109px;
 }

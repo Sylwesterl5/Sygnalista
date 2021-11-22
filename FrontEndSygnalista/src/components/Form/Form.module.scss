@@ -1,17 +1,34 @@
 .wrapper {
-    width: 50%;
-    margin: 50px auto 100px;
+    width: 60%;
+    //margin: 50px auto 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: white;
+    border-radius: 20px;
+    border-bottom-style: solid;
+    border-bottom-color: yellow;
+    border-right-color: yellow;
   }
   
   
   .form {
     width: 100%;
-    max-width: 350px;
+    //max-width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+  }
+
+  .one {
+    width: 20%;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .divweight {
+    width: 100%;
   }

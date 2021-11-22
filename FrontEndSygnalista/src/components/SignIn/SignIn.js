@@ -6,6 +6,7 @@ import styles from './SignIn.module.scss';
 
 const SignIn = ({submitSignIn}) => (
     <div className={styles.wrapper}>
+        <div className={styles.one}/>
         <Title>Dodaj zgłoszenie</Title>
         <Title>Zaloguj się</Title>
         <form autoComplete="off" className={styles.form} onSubmit={submitSignIn}>
@@ -13,6 +14,7 @@ const SignIn = ({submitSignIn}) => (
             <Input name='password' label='password' type='password' placeholder="*********" />
             <Button type='submit'>Potwierdź</Button>
         </form>
+        <div className={styles.one}/>
     </div>
 );
 

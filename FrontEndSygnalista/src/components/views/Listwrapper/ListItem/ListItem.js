@@ -54,7 +54,7 @@ const ListItem = ({
   );
 
   return (
-    <li>
+    <li className={styles.listyle}>
       <div className={styles.list}>
         <div className={styles.wrapper}>
           <div className={`${classStatus} ${styles.status}`}></div>
