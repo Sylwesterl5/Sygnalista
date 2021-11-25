@@ -58,8 +58,6 @@ const App = () => {
     <div className="App">
       <ListWrapper items={items} />
       <Form submitFn={addItem} />
-      {/* <SignIn submitSignIn={signIn} /> */}
-      
     </div>
   );
 };
