@@ -37,8 +37,6 @@ const App = () => {
 
   const signIn = useCallback((e) => {
     e.preventDefault();
-    console.log(e.target[0].value);
-    console.log(e.target[1].value);
     e.target.reset();
 
   },[])

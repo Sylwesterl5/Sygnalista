@@ -10,17 +10,5 @@ const ConnectList = async () => {
   });
 
   return connection;
-
-  // simple query
-
-  // const dataa = connection.query(
-  // 'SELECT * FROM wiadomosc, zgloszenie WHERE wiadomosc.id_zgloszenia = zgloszenie.id_zgloszenia;',
-  // function(err, results, fields) {
-  //      console.log(results); // results contains rows returned by server
-  //     // console.log(fields); // fields contains extra meta data about results, if available
-  // }
-  // );
-
-  // console.log(dataa.);
 };
 module.exports = ConnectList;

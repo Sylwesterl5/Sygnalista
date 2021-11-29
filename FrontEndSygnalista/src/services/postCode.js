@@ -1,5 +1,14 @@
-export const postCode = async ({ code }) => {
-  const result = await fetch("http://localhost:3000/api/zgloszenias", {
+export const postCode = async ({ code, query }) => {
+  // query
+  // {status: 4}
+
+  const endpoint =
+    "http://localhost:3000/api/zgloszenias" +
+    (query ? `?${new URLSearchParams(query)}` : "");
+
+  console.log(endpoint);
+
+  const result = await fetch(endpoint, {
     method: "POST", // *GET, POST, PUT, DELETE, etc.
     mode: "cors", // no-cors, *cors, same-origin
     // cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached

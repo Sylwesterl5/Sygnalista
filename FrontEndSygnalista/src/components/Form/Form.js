@@ -40,7 +40,7 @@ const Form = ({ submitFn, idZgloszenia }) => {
     <div className={styles.flex}>
       <div className={styles.one}></div>
       <div className={styles.wrapper}>
-        <Title>Dodaj zgłoszenie</Title>
+        <Title>{idZgloszenia ? "Dodaj odpowiedź" : "Dodaj zgłoszenie"}</Title>
         <form
           autoComplete="off"
           className={styles.form}

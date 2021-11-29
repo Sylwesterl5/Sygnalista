@@ -18,11 +18,9 @@ const queryNewZgloszenie = async (
   const kod = (await getUniqueCode(connection)).toUpperCase();
 
   console.log(kod);
-  //await connection.execute('SELECT * FROM `table` WHERE `name` = ? AND `age` > ?', ['Morty', 14]);
   const stringQueery =
     "INSERT INTO zgloszenie (`id_zgloszenia`, `tytul`, `kod`, `wiadomosc`, `status`, `CzyOperator`) VALUES (NULL, ?, ?, ?, ?, '0');";
   await connection.execute(stringQueery, [title, kod, description, status]);
-  console.log("afterexecut");
   return { kod };
 };
 module.exports = queryNewZgloszenie;

@@ -13,7 +13,7 @@ const ResponseItemList = ({ idZgloszenia, code, lastWiadomoscId }) => {
   return (
     <ul>
       {responses.map((item) => (
-        <ListItem key={item.id_wiadomosci} {...item} isZgloszenie={false} />
+        <ListItem key={item.id_wiadomosci} {...item} isZgloszenie={false} status={null} />
       ))}
     </ul>
   );

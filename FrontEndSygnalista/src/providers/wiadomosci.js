@@ -8,8 +8,8 @@ const WiadomosciProvider = ({ children }) => {
   const codeState = useState(null);
 
   return (
-    <CodeContext.Provider value={state}>
-      <WiadomosciContext.Provider value={codeState}>
+    <CodeContext.Provider value={codeState}>
+      <WiadomosciContext.Provider value={state}>
         {children}
       </WiadomosciContext.Provider>
     </CodeContext.Provider>

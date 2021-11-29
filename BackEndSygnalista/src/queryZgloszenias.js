@@ -5,26 +5,30 @@
 //   );
 //   return rows;
 // };
-const adminCode = "1";
+const adminCode = "BCO098231";
 
 // SELECT * FROM zgloszenie ;
 
 // SELECT * FROM zgloszenie WHERE zgloszenie.kod=? ;
 
-const queryZgloszenias = async (connection, code) => {
-  console.log(code);
+const queryZgloszenias = async (connection, code, status = "*") => {
+  console.log(status, code);
   const stringQueery =
     code === adminCode
       ? // ? "SELECT * FROM wiadomosc, zgloszenie WHERE wiadomosc.id_zgloszenia = zgloszenie.id_zgloszenia and pierwszy=1 ;"
         // : "SELECT * FROM wiadomosc, zgloszenie WHERE wiadomosc.id_zgloszenia = zgloszenie.id_zgloszenia and pierwszy=1 and kod=? ;";
 
-        "SELECT * FROM zgloszenie ;"
-      : "SELECT * FROM zgloszenie WHERE zgloszenie.kod=? ;";
-
+        `SELECT * FROM zgloszenie ${status === "*" ? "" : "WHERE status=?"} ;`
+      : "SELECT * FROM zgloszenie WHERE zgloszenie.kod=?;";
   if (!code) {
     return { error: "missingCode" };
   }
-  const [rows] = await connection.execute(stringQueery, [code]);
+  const [rows] = await connection.execute(stringQueery, [
+    code === adminCode ? status : code,
+  ]);
+  if (rows.length === 0 && status !== "*") {
+    return [];
+  }
   if (rows.length === 0) {
     return { error: "wrongCode" };
   }

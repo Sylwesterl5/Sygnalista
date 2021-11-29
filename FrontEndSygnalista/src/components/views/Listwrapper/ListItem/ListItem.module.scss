@@ -42,6 +42,9 @@ ul {
 .statusFaill {
   background-color: red;
 }
+.statusHidden {
+  display: none;
+}
 
 .title {
   color: rgb(34, 134, 228);
@@ -56,13 +59,18 @@ ul {
 .description {
   font-weight: 300;
   word-wrap: break-word;
+  font-size: 26px;
 }
 
 .listyle {
   background: white;
     border-radius: 20px;
     border-bottom-style: solid;
-    border-bottom-color: yellow;
-    border-right-color: yellow;
+    border-bottom-color: #f0f0f1;;
+    border-right-color: #f0f0f1;;
+}
+
+.marginTop {
+  margin-top: 100px;
 }
 

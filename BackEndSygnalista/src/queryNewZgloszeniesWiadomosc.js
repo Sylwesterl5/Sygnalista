@@ -2,7 +2,6 @@ const queryNewZgloszeniesWiadomosc = async (
   connection,
   { description, idZgloszenia }
 ) => {
-  //await connection.execute('SELECT * FROM `table` WHERE `name` = ? AND `age` > ?', ['Morty', 14]);
 
   var newDate = new Date().toISOString();
   const stringQueery =
