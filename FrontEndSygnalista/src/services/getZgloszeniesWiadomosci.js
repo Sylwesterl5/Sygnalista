@@ -1,6 +1,8 @@
+import { API } from "const";
+
 export const getZgloszeniesWiadomosci = async ({ idZgloszenia }) => {
   const result = await fetch(
-    `http://localhost:3000/api/zgloszenie/${idZgloszenia}`,
+    `${API}/api/zgloszenie/${idZgloszenia}`,
     {
       method: "GET", // *GET, POST, PUT, DELETE, etc.
       mode: "cors", // no-cors, *cors, same-origin

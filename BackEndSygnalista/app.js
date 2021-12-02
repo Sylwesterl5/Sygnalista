@@ -75,7 +75,7 @@ app.listen(3000, () => {
 });
 
 app.get("/", (req, res) => {
-  res.send([{ dupa: "asdasd" }]);
+  res.send([{ dziala: "dziala" }]);
 });
 
 module.exports = app;
