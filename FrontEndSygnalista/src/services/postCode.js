@@ -1,9 +1,11 @@
+import { API } from "const";
+
 export const postCode = async ({ code, query }) => {
   // query
   // {status: 4}
 
   const endpoint =
-    "http://localhost:3000/api/zgloszenias" +
+    `${API}/api/zgloszenias` +
     (query ? `?${new URLSearchParams(query)}` : "");
 
   console.log(endpoint);

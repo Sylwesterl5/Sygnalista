@@ -97,4 +97,8 @@ app.listen(3000, () => {
   console.log("zwrot callbacka: server działa ");
 });
 
+app.get("/", (req, res) => {
+  res.send([{ dziala: "dziala" }]);
+});
+
 module.exports = app;

@@ -4,9 +4,9 @@ const ConnectList = async () => {
   // create the connection to database
   const connection = await mysql.createConnection({
     host: "127.0.0.1",
-    user: "admin",
+    user: "root",
     database: "db_sygnalista",
-    password: "admin",
+    password: "",
   });
 
   return connection;
