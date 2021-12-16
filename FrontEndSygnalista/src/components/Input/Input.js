@@ -2,7 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./input.module.scss";
 
-const Input = ({
+
+
+const InputBase = ({
   tag: Tag,
   name,
   label,
@@ -11,7 +13,7 @@ const Input = ({
   upperStyle,
   uppercase,
   ...rest
-}) => (
+},ref) => (
   <div className={invisible ? styles.invisible : styles.formItem}>
     <Tag
       {...rest}
@@ -21,6 +23,7 @@ const Input = ({
       //maxLenght={maxLenght}
       required
       placeholder=" "
+      ref={ref}
     />
     <label className={styles.label} htmlFor={name}>
       {label}
@@ -28,6 +31,8 @@ const Input = ({
     <div className={styles.fromItemBar} />
   </div>
 );
+
+const Input = React.forwardRef(InputBase)
 
 Input.propTypes = {
   tag: PropTypes.string,

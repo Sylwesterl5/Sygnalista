@@ -23,6 +23,7 @@ const queryNewZgloszenie = require("./src/queryNewZgloszenie");
 const queryZgloszeniesWiadomosci = require("./src/queryZgloszeniesWiadomosci");
 const queryNewZgloszeniesWiadomosc = require("./src/queryNewZgloszeniesWiadomosc");
 const queryUpdateStatus = require("./src/queryUpdateStatus");
+const queryUpdateWiadomosc = require("./src/queryUpdateWiadomosc");
 
 ConnectList().then();
 
@@ -43,8 +44,8 @@ const initialize = async () => {
     });
     res.send(result);
   });
-  app.get("/api/zgloszenie/:idZgloszenia", async (req, res) => {
 
+  app.get("/api/zgloszenie/:idZgloszenia", async (req, res) => {
     const result = await queryZgloszeniesWiadomosci(
       connection,
       req.params.idZgloszenia
@@ -59,6 +60,17 @@ const initialize = async () => {
     res.send(result);
   });
 
+  app.put("/api/zgloszenieStatus/zgloszenieUpdate", async (req, res) => {
+    const { status, idZgloszenia } = req.body;
+
+    const result = await queryUpdateWiadomosci(
+      connection,
+      updatedWiadomsoc,
+      id_wiadomosci
+    );
+    res.send(result);
+  });
+
   app.post("/api/zgloszenie/:idZgloszenia", async (req, res) => {
     const { description } = req.body;
     const result = await queryNewZgloszeniesWiadomosc(connection, {
@@ -67,15 +79,22 @@ const initialize = async () => {
     });
     res.send(result);
   });
+
+  app.put("/api/zgloszenieUpdateWiadomosc", async (req, res) => {
+    const { updatedWiadomsoc, id_wiadomosci } = req.body;
+
+    const result = await queryUpdateWiadomosc(
+      connection,
+      updatedWiadomsoc,
+      id_wiadomosci
+    );
+    res.send(result);
+  });
 };
 initialize();
 
 app.listen(3000, () => {
   console.log("zwrot callbacka: server działa ");
-});
-
-app.get("/", (req, res) => {
-  res.send([{ dupa: "asdasd" }]);
 });
 
 module.exports = app;

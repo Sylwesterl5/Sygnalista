@@ -70,7 +70,7 @@ const Form = ({ submitFn, idZgloszenia }) => {
             tag="textarea"
             name="description"
             label="Zgłoszenie"
-            maxLength={1000}
+            maxLength={2000}
             onChange={handleDescriptionValueChange}
             value={descriptionValue}
           />

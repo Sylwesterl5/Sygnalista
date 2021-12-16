@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Button.module.scss";
 
-const Button = ({ children, href, ...rest }) => (
+const Button = ({ children, href, buttonListWeight, ...rest }) => (
   <>
     {href ? (
       <a
@@ -13,7 +13,7 @@ const Button = ({ children, href, ...rest }) => (
         {children}
       </a>
     ) : (
-      <button {...rest} className={styles.button}>
+      <button {...rest} className={buttonListWeight? styles.buttonListWrapper : styles.button}>
         {children}
       </button>
     )}

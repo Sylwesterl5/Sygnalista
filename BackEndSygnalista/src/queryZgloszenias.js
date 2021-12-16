@@ -1,18 +1,8 @@
-// const queryAllWiadomosci = async (connection, args = []) => {
-//   const [rows] = await connection.execute(
-//     "SELECT * FROM wiadomosc, zgloszenie WHERE wiadomosc.id_zgloszenia = zgloszenie.id_zgloszenia and pierwszy=1 ;",
-//     args
-//   );
-//   return rows;
-// };
 const adminCode = "BCO098231";
-
-// SELECT * FROM zgloszenie ;
-
-// SELECT * FROM zgloszenie WHERE zgloszenie.kod=? ;
-
+let admin = false;
 const queryZgloszenias = async (connection, code, status = "*") => {
   console.log(status, code);
+  code === adminCode ? (admin = true) : (admin = false);
   const stringQueery =
     code === adminCode
       ? // ? "SELECT * FROM wiadomosc, zgloszenie WHERE wiadomosc.id_zgloszenia = zgloszenie.id_zgloszenia and pierwszy=1 ;"
@@ -32,8 +22,11 @@ const queryZgloszenias = async (connection, code, status = "*") => {
   if (rows.length === 0) {
     return { error: "wrongCode" };
   }
-  return rows;
+  const rowsEnd = {
+    rows,
+    admin,
+  };
+
+  return rowsEnd;
 };
 module.exports = queryZgloszenias;
-/// 2 tablice
-// wiadomosci

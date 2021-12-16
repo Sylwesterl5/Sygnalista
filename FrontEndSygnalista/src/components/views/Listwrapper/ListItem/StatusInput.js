@@ -13,12 +13,11 @@ const StatusInput = ({ status, idZgloszenia }) => {
 
   const handleSelectNewStatus = useCallback((e) => {
     putZgloszeniesStatus({ idZgloszenia, status:e.target.value }).then((updatedWiadomosc) => {
-      const wiadomosciCopy = [...wiadomosci]
+      console.log(wiadomosci);
+      const wiadomosciCopy =  [...wiadomosci.rows ]  // {rows, admin}
       const updatedWiadomoscIndex = wiadomosciCopy.findIndex(({id_zgloszenia})=>id_zgloszenia===idZgloszenia)
-      console.log(updatedWiadomoscIndex)
       wiadomosciCopy.splice(updatedWiadomoscIndex,1,updatedWiadomosc);
-      console.log(wiadomosciCopy)
-      setWiadomosci(wiadomosciCopy)
+      setWiadomosci({...wiadomosci, rows: wiadomosciCopy})
     });
   }, [idZgloszenia, setWiadomosci, wiadomosci]);
 
@@ -51,16 +50,13 @@ const StatusInput = ({ status, idZgloszenia }) => {
       {selectVisible && (
         <select onChange={handleSelectNewStatus} defaultValue={status}>
           <option  value="1">
-            Status 1
+            Nowe zgłoszenia
           </option>
           <option  value="2">
-            Status 2
+            W trakcie zgłoszenia
           </option>
           <option  value="3">
-            Status 3
-          </option>
-          <option  value="4">
-            Status 4
+            Zakończone zgłoszenia
           </option>
         </select>
       )}

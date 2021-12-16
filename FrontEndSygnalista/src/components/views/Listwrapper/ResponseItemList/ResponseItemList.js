@@ -9,11 +9,10 @@ const ResponseItemList = ({ idZgloszenia, code, lastWiadomoscId }) => {
       setResponses(wiadomosciList);
     });
   }, [idZgloszenia, code, lastWiadomoscId]);
-
   return (
     <ul>
-      {responses.map((item) => (
-        <ListItem key={item.id_wiadomosci} {...item} isZgloszenie={false} status={null} />
+      {responses.map((item,index) => (
+        <ListItem key={item.id_wiadomosci} {...item} isZgloszenie={false} status={null} isEditable= {index === responses.length -1} />
       ))}
     </ul>
   );

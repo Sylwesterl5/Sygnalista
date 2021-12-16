@@ -25,7 +25,7 @@ const SortStatusListWrapper = ({ status }) => {
 
   return (
     <div className={styles.styleSelect}>
-      <label for="status-select">wybierz status:</label>
+      <label for="status-select">posortuj według statusu status:</label>
 
       <select
         name="status"
@@ -33,10 +33,9 @@ const SortStatusListWrapper = ({ status }) => {
         onChange={selectNewStatusHandler}
       >
         <option value="*">Wszystkie</option>
-        <option value="1">Startowe zgłoszenia</option>
-        <option value="2">W trakcie rozwiązywania problemów</option>
-        <option value="3">Zakończone sukcesem</option>
-        <option value="4">Zakończone niepowodzeniem</option>
+        <option value="1">Nowe zgłoszenia</option>
+        <option value="2">W trakcie zgłoszenia</option>
+        <option value="3">Zakończone zgłoszenia</option>
       </select>
     </div>
   );

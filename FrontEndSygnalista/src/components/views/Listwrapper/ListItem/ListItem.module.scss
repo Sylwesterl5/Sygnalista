@@ -20,8 +20,8 @@ ul {
 }
 
 .status {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   margin-right: 30px;
   flex-shrink: 0;
@@ -74,3 +74,17 @@ ul {
   margin-top: 100px;
 }
 
+.buttonMargin {
+  width: 100%;
+}
+
+.addFlexDiv{
+  //display: flex;
+}
+
+.kod {
+  color: rgb(34, 134, 228);
+  font-weight: 700;
+  font-size: 36px;
+  margin: 0 30px;
+}
